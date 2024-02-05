@@ -1,11 +1,3 @@
-body {
-  font-family:'Times New Roman',Arial,'Microsoft YaHei',SimHei;
-}
-
-
-.highlight {background-color:#272822; }
-.highlight .lineno {display: none;}
-.code-header {display: none;}
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight .gh {

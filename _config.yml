@@ -63,14 +63,14 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: # [light|dark]
+theme_mode: light
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+# img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: /assets/images/avatar.jpg
@@ -108,7 +108,7 @@ assets:
     enabled: true
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
-    env: development
+    env: production
 
 pwa:
   enabled: true # the option for PWA feature
