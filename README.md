@@ -21,7 +21,7 @@ pin: true
 
 3. 到这里访问[username].github.io应该会有初步的博客的架子了，然后clone仓库到本地开始添修改_config.yml，加自己的文章，但是添加了markdown文章之后再push到github上，发现博客起不起来了，通过github仓的actions可以看到具体的报错信息：
 
-![]（/assets/images/the-first-blog/20240206144708.png）
+![](/assets/images/the-first-blog/20240206144708.png)
 
 排错不可能每次都改一下推上去再看github的actions到底报了什么错，效率太低了，所以需要在本地搭建环境。基于[Jekyll的指导](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)安装Jekyll, 我是在Ubuntu下:
 
