@@ -19,7 +19,7 @@ pin: true
 
     ![](/assets/images/the-first-blog/20240206143728.png)
 
-3. 到这里访问[username].github.io应该会有初步的博客的架子了，然后clone仓库到本地开始添修改_config.yml，加自己的文章，但是添加了markdown文章之后再push到github上，发现博客起不起来了，通过github仓的actions可以看到具体的报错信息：
+3. 到这里访问[username].github.io应该会有初步的博客的架子了，然后clone仓库到本地开始修改_config.yml，添加自己的文章，但是添加了markdown文章之后再push到github上，发现博客起不起来了，通过github仓的actions可以看到具体的报错信息：
 
 ![](/assets/images/the-first-blog/20240206144708.png)
 
@@ -90,3 +90,4 @@ bundle exec htmlproofer _site \
 * md文件里面的图片暂时先放到了assets静态文件目录下了，对于github仓库1G的限制，这样放可能不太合理，后续找一个合适的图床平台再来修改。
 
 就酱紫吧~ 开门大吉~~
+ 

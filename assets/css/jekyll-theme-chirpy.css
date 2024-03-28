@@ -6,7 +6,7 @@ h2,
 h1 {
     color: var(--heading-color);
     font-weight: 400;
-    font-family: 'Times New Roman',Arial,'Microsoft YaHei',SimHei
+    font-family: 'Times New Roman',"Arial",'Microsoft YaHei',"SimSun"
 }
 
 main h5,
@@ -2653,7 +2653,7 @@ search i {
 }
 
 #main-wrapper>.container {
-    min-height: 100vh;
+    min-height: 100%;
     margin-left: 1%; 
     min-width:100%
 }
