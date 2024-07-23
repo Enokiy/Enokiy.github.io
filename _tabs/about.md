@@ -4,5 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+普普通通的俗人一个，没有什么不一样的烟火~ 
+
+如果非要说点啥的话， 那就 “ 手持烟火以谋生，且停且忘且随风；且行且看且从容~~”
