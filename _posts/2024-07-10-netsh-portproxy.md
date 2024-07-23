@@ -16,13 +16,13 @@ tags: [端口转发]
 
 使用以下命令查看当前的端口转发规则：
 
-```
+```shell
 netsh interface portproxy show all
 ```
 
 2. 使用以下命令添加一个新的端口转发规则：
 
-```
+```shell
 netsh interface portproxy add v4tov4 listenaddress=<本地IP地址> listenport=<本地端口> connectaddress=<远程IP地址> connectport=<远程端口> protocol=tcp
 ```
 
@@ -35,19 +35,19 @@ netsh interface portproxy add v4tov4 listenaddress=<本地IP地址> listenport=<
 
 例如，要将来自主机A的22端口流量转发到主机C的22端口，可以在主机B上执行以下命令：
 
-```
+```shell
 netsh interface portproxy add v4tov4 listenaddress=ip_of_B listenport=22 connectaddress=ip_of_C connectport=22 protocol=tcp
 ```
 
 3. 查看添加的端口转发规则是否生效：
-```
+```shell
 netsh interface portproxy show all
 netstat -ano|findstr 22
 ```
 
 4. 如果要删除端口转发规则，可以使用以下命令：
 
-```
+```shell
 netsh interface portproxy delete v4tov4 listenaddress=<本地IP地址> listenport=<本地端口> protocol=tcp
 ```
 
@@ -55,7 +55,7 @@ netsh interface portproxy delete v4tov4 listenaddress=<本地IP地址> listenpor
 
 使用上面的命令设置了端口转发之后用`netsh interface portproxy show all`可以看到设置的信息，但是使用`netstat` 查看端口并没有打开，最终发现需要启动服务IP Helper：
 
-```
+```shell
 # 使用管理员打开终端
 net start iphlpsvc
 ```

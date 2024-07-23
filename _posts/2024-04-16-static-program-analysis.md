@@ -19,8 +19,10 @@ tags: [静态分析]
     * 应用: 程序分析、程序验证、程序合成等
 * 静态分析: 在不运行一个程序的情况下，通过某种方法分析该程序就知道其是否满足某些性质。（Static analysis analyzes a program P to reason about its behaviors and determines whether it satisfies some properties before running P.）
 * Soundness 、Completeness、误报、漏报：
-* 静态分析，实际上就是在确保（或尽可能接近）soundness的前提下，在分析精度与分析速度之间取得一个有效的平衡。..
+* 静态分析，实际上就是在确保（或尽可能接近）soundness的前提下，在分析精度与分析速度之间取得一个有效的平衡。
+
 ![](/assets/images/static-program-analysis/2024-04-02-15-03-31.png)
+
 * Abstraction + overapproximation：
 > 抽象是指对数据的抽象;值域、抽象值域
 > overapproximation：包括转换函数（Transfer function）和控制流

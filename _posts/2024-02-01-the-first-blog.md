@@ -49,7 +49,14 @@ pin: true
 
 2. 通过[ Chirpy Starter](https://github.com/cotes2020/chirpy-starter)生成的仓库，缺少assets/下面的静态文件
 
-> （又是一个没有仔细阅读使用说明的锅），通过[chirpy静态文件](https://github.com/cotes2020/chirpy-static-assets#readme)解决，需要注意的点是要把[chirpy静态文件](https://github.com/cotes2020/chirpy-static-assets)这个仓fork到自己的github里面，否则静态页面依然会报错。
+> （又是一个没有仔细阅读使用说明的锅），通过[chirpy静态文件](https://github.com/cotes2020/chirpy-static-assets#readme)解决，但是发现每次因为git的submodule出现各种奇奇怪怪的问题，所以终极解决方法直接把本地生成的_site/assets/lib拷贝到assets下,然后把_config.yml中的assets/self_host/enabled改成false:
+
+```yml
+assets:
+  self_host:
+    enabled: false
+```
+
 
 3. 通过[ Chirpy Starter](https://github.com/cotes2020/chirpy-starter)生成的仓库，模板不支持中文
 
