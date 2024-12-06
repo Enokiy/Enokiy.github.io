@@ -25,7 +25,6 @@ package-lock.json
 _sass/dist
 # assets/js/dist
 
-_posts/2023-12-02-kafka-config-injection.md
 _posts/2024-06-10-mybatis-ognl.md
 _posts/2024-05-06-k8s-binary-debug.md
 _posts/2024-03-25-codeQL.md
